@@ -1,8 +1,7 @@
 {
-  "name": "backmarify",
+  "name": "hello world",
   "version": "0.0.0",
-  "description": "A Backbone, Marionette, Browserify boilerplate",
-  "main": "./src/main.js",
+  "description": "hello world for docker ci/cd experiments",
   "author": "George Ornbo <george@shapeshed.com> (http://shapeshed.com/)",
   "scripts": {
     "start": "node index.js"
