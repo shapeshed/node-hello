@@ -2,12 +2,13 @@ FROM  node:0.10-slim
 
 MAINTAINER  George Ornbo "george@shapeshed.com"
 
-ADD https://github.com/shapeshed/node-hello/archive/v0.1.0.tar.gz /srv/
+ADD https://github.com/shapeshed/node-hello/archive/v0.1.1.tar.gz /srv/
 
 WORKDIR /srv
 
-RUN tar -xzf /srv/v0.1.0.tar.gz --strip 1
+RUN tar -xzf /srv/v0.1.1.tar.gz --strip 1
 
+RUN rm /srv/v0.1.1.tar.gz
 
 EXPOSE 8080
 
