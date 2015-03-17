@@ -1,5 +1,5 @@
 {
-  "name": "hello world",
+  "name": "hello-world",
   "version": "0.1.0",
   "description": "hello world for docker ci/cd experiments",
   "author": "George Ornbo <george@shapeshed.com> (http://shapeshed.com/)",
