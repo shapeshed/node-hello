@@ -7,7 +7,7 @@ machine:
 dependencies:
   pre:
     - pip install awscli
-    - docker build -t shapeshed/node-hello:$CIRCLE_SHA1
+    - docker build -t shapeshed/node-hello:$CIRCLE_SHA1 .
 
 test:
   override:
