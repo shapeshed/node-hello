@@ -2,9 +2,10 @@ machine:
   services:
     - docker
 
-override:
-  - docker info
-  - docker build -t shapeshed/node-hello .
+test:
+  override:
+    - docker info
+    - docker build -t shapeshed/node-hello .
      
 deployment:
   hub:
