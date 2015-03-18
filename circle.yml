@@ -1,15 +1,21 @@
 machine:
+  python: 
+    version: 2.7.3
   services:
     - docker
+      
+dependencies:
+  pre:
+    - pip install awscli
+    - docker build -t shapeshed/node-hello:$CIRCLE_SHA1
 
 test:
   override:
     - docker info
-    - docker build -t shapeshed/node-hello .
      
 deployment:
   hub:
     branch: master
     commands:
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-      - docker push shapeshed/node-hello
+      - ./deploy.sh $CIRCLE_SHA1
