@@ -14,8 +14,18 @@ test:
     - docker info
      
 deployment:
-  hub:
+  master:
     branch: master
     commands:
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-      - ./deploy.sh $CIRCLE_SHA1
+      - ./deploy.sh $CIRCLE_SHA1 $CIRCLE_BRANCH
+  staging:
+    branch: staging
+    commands:
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - ./deploy.sh $CIRCLE_SHA1 $CIRCLE_BRANCH
+  master:
+    branch: production
+    commands:
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - ./deploy.sh $CIRCLE_SHA1 $CIRCLE_BRANCH
