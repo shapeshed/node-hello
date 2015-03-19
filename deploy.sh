@@ -6,13 +6,13 @@ BRANCH=$2
 
 case $BRANCH in
   master)
-    $ENVIRONMENT_NAME=hello-env
+    ENVIRONMENT_NAME=hello-env
     ;;
   staging)
-    $ENVIRONMENT_NAME=hello-staging
+    ENVIRONMENT_NAME=hello-staging
     ;;
   production)
-    $ENVIRONMENT_NAME=hello-production
+    ENVIRONMENT_NAME=hello-production
     ;;
 esac
 
