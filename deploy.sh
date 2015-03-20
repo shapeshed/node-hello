@@ -17,7 +17,7 @@ case $BRANCH in
 esac
 
 # Deploy image to Docker Hub
-sudo docker push shapeshed/node-hello:$SHA1
+docker push shapeshed/node-hello:$SHA1
 
 # Create new Elastic Beanstalk version
 EB_BUCKET=pebbledocker
